@@ -14,4 +14,12 @@ router.post('/', (req, res) => {
     queries.createStudent(req.body).then(newStudent => res.status(201).send(newStudent))
 })
 
+router.put('/:id', (req, res) => {
+    queries.updateStudent(req.params.id, req.body).then(updatedStudent => res.status(200).send(updatedStudent))
+})
+
+router.delete('/:id', (req, res) => {
+    queries.deleteStudent(req.params.id).then(deletedStudent => res.status(204).send(deletedStudent[0]))
+})
+
 module.exports = router
