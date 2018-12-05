@@ -6,5 +6,8 @@ module.exports = {
     },
     readStudentById(id) {
         return db('students').where('id', id).first()
+    },
+    createStudent(newStudent) {
+        return db('students').insert(newStudent).returning('*')
     }
 }
