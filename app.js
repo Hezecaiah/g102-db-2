@@ -8,7 +8,7 @@ const students = require('./routes/students_routes')
 app.use(cors())
 app.use(bodyParser.json())
 app.use(bodyParser.urlencoded({extended: true}))
-app.use('/students', students)
+app.use('/students', `students`)
 
 
 app.listen(port, () => {
