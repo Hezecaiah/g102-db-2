@@ -3,7 +3,7 @@ const app = express()
 const bodyParser = require('body-parser')
 const cors = require('cors')
 const port = process.env.PORT || 3003
-const students = require('./routes/students')
+const students = require('./routes/students_routes')
 
 app.use(cors())
 app.use(bodyParser.json())
